@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.row {
+  /* below : create a flex container => all it's direct children will be flex-items */
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.block {
+  flex: 1; /* below : take available space and distribute it accross flex-items */
+  min-height: 200px;
+  background: dodgerblue;
+  color: white;
+  margin-right: 20px;
+}
+
+.block.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row .block:last-child {
+  margin-right: 0;
+}
+
+.red-block {
+  width: 230px;
+  height: 230px;
+  background: tomato;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 20px;
+  border: 2px solid darkslategrey;
+}
+
+/* The red block is affected by box-sizing border-box. so padding and borders won't make it bigger ; ) */
