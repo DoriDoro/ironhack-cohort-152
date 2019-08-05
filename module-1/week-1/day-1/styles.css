@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.title {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cohort {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 0.3rem;
+  /* margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: 0; */
+  /* margin: 10px 0 20px 0; */
+  /* margin: 10px 0; */
+  margin: 10px 0 20px;
+}
+
+.ironhacker {
+  list-style-type: none;
+}
+
+.ironhacker.full {
+  color: chartreuse;
+}
+
+.ironhacker.back {
+  color: red;
+}
+
+.ironhacker.front {
+  color: blue;
+}
+
+.table,
+.table th,
+.table td {
+  border: 1px solid;
+}
+
+#table_simple,
+#table_simple td {
+  border-color: #74a61c;
+}
+
+#table_complex {
+    border-collapse: collapse;
+}
+
+#table_complex,
+#table_complex th,
+#table_complex td {
+  border-color: gray;
+}
