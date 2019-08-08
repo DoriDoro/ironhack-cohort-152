@@ -1,0 +1,86 @@
+// 6 (+1) data types 
+
+// String
+// Number
+// Boolean
+// null
+// undefined
+// Object
+// + Symbol
+
+
+_____ STRINGS _____
+
+"hello world"
+'hello world'
+`hello world`
+"a", "joe", "foo", "", '', ``, "11", "0"
+
+
+_____ NUMBERS _____
+
+// -2000, 0, 1, 1.3, 1e10, 10 * 10
+
+_____ BOOLEANS _____
+
+true OR false
+
+// TABLE OF TRUTH
+
+// AND TABLE =>
+true && true === true
+false && false === false
+true && false === false
+false && true === false
+
+// OR TABLE =>
+true || true === true
+false || false === false
+true || false === true
+false || true === true
+
+Caution ...
+0 == false
+1 == true
+
+_____ BOOLEANS _____
+
+null represent the absence of value (temporary OR definitive)
+null has to be writen or returned after a function call.
+
+_____ UNDEFINED _____
+
+undefined is the total absence of value
+undefined means this value has never been written AT ALL !!!
+
+
+_____ OBJECT _____
+
+An object is a collection of key/value pairs.
+
+An object can hold any other data type, objects included.
+
+In JS, Arrays [] are objects. 
+
+var cat = {
+    name: "Fugee",
+    age: .6,
+    isCute: true,
+    hobbies: [
+        "paper bags",
+        "tuna fish",
+        "cuddling"
+    ],
+    children: null
+};
+
+to access a value, use the var name + the accessor (. or []) and the key.
+
+ex: 
+
+console.log(cat.name);
+console.log(cat["name"]);
+
+
+
+
