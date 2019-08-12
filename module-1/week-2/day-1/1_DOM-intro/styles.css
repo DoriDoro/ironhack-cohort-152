@@ -1,0 +1,8 @@
+.cohort {
+    list-style: none;
+    cursor: pointer;
+}
+
+.is-active {
+    color: orangered;
+}
