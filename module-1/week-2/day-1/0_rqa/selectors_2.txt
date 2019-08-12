@@ -1,4 +1,5 @@
-/* guess what's selected :) */
+-- CSS - Try to guess what's selected :) --
+
 p, div, section, footer
 a, .link
 p i
