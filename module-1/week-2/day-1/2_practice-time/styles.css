@@ -1,0 +1,12 @@
+#blocks {
+    display: flex;
+    max-width: 80vw;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+}
+
+#blocks .block {
+    border: 2px solid;
+    height: 100px;
+    width: 100px;
+}

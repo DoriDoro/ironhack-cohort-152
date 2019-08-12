@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM Intro - Practice</title>
+    <script src="./simple-selection.js"></script>
+    <script type="module" src="./colored-blocks.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  <body>
+    <h1 class="title">Time to practice</h1>
+    <h2 class="title">Simple selection + looping</h2>
+    <p id="practice_1">
+      Create a short program that : <br />
+      - selects every elements on the document <br />
+      - loop through this list and display the localName of each element
+    </p>
+    <hr />
+    <h2 class="title">Code along : colored-blocks-creator</h2>
+    <p>
+      Our client demand a simple program that allows to add blocks (divs) in the
+      document. <br />The end-user may choose the color and the number of new
+      blocks. You can add as many blocks as you like !<br />
+      The program contains also a reset button for emptying the block list.
+    </p>
+    <hr />
+    <div id="colored_blocks_widget" class="widget">
+      <input id="input_blocks_count" type="number" min="1" value="1" />
+      <input id="input_color" type="color" />
+      <button id="btn_create">create</button>
+      <button id="btn_reset">reset</button>
+    </div>
+    <div id="blocks"></div>
+    <hr />
+  </body>
+</html>
