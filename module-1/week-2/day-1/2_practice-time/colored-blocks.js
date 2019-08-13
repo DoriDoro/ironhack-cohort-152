@@ -28,13 +28,13 @@ function handleCreate() {
   for (let i = 0; i < nbBlocks; i += 1) {
     // step 2 => we'll get a fresh new block on each function call
     const block = createBlock();
-    // step 3 => we now have the div, so let's add it to the document
+    // step 3 => we now have the block, so let's add it to the document
     appendBlock(block);
   }
 }
 
 function handleReset() {
-    blocks.innerHTML = `<ul><li>${1 + 1}</li><ul>`;
+    blocks.innerHTML = ``;
 }
 
 btnCreate.onclick = handleCreate;
