@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM review I</title>
+    <script type="module" src="./dom-events.js"></script>
+    <script type="module" src="./dom-selection.js"></script>
+  </head>
+  <body>
+    <nav id="nav_main">
+      <a href="/" class="is-active">home</a>
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+    </nav>
+    <form id="data_watcher">
+      <input id="my_text_input" type="text" />
+      <input id="my_number_input" type="number" class="is-active"/>
+      <input id="my_range_input" type="range" />
+    </form>
+    <div id="data_displayer">
+      no data yet...
+    </div>
+  </body>
+</html>
