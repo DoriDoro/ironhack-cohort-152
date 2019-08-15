@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.bar {
+    height: 5px;
+    width: 220px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    background: silver;
+}
+
+.bar .progress {
+    height: 100%;
+    width: 100%;
+    color: white;
+    position: absolute;
+    transition: background 2s ease-in;
+}
+
+.bar .progress.ok {
+    background: green;
+}
+
+.bar .progress.warning {
+    background: orange;
+}
+
+.bar .progress.danger {
+    background: red;
+}
