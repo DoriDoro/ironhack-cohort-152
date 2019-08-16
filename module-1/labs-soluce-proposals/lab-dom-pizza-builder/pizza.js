@@ -2,6 +2,7 @@
 var pizzaBuilder = (function() {
   
   const basePrice = 10;
+
   const state = {
     // i've merged var ingredients in the state :)
     pepperonni: { isActive: true, name: "Pepperonni", price: 1 },
@@ -13,9 +14,9 @@ var pizzaBuilder = (function() {
 
   function renderPrice() {
     var total = 0;
+    
     const list = document.getElementById("list_ingredients_prices");
     const price = document.querySelector(".panel.price strong");
-
     list.innerHTML = "";
 
     for (let topping in state) {
