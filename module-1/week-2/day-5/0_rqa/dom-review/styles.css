@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+}
+
+.is-active {
+    color: red;
+    font-weight: bold;
+}
+
+.item {
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.title {
+    color: dodgerblue;
+}
