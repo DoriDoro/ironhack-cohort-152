@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+</head>
+
+<body>
+    <h1 class="title">{{title}}</h1>
+    <ul>
+        {{#each cities}}
+        <li>{{ @index }} - {{ this }}</li>
+        {{/each}}
+    </ul>
+    {{#unless cities}}
+    <p>Meh, no cities yet !!!</p>
+    {{/unless}}
+    <hr>
+    <ul>
+        {{#each peoples}}
+        <li>
+            {{#if @first}}
+            first object : 
+            {{/if}}
+
+            {{#if @last}}
+            last object : 
+            {{/if}}
+            
+            {{@key}} - {{this.name}} / {{this.age}}</li>
+        {{/each}}
+    </ul>
+</body>
+
+</html>

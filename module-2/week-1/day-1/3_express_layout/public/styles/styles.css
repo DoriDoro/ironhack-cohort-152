@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Menlo;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#nav_main {
+  height: 60px;
+  background: black;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  width: 100vw;
+}
+
+#nav_main .link {
+  margin-right: 10px;
+}
+
+.pane {
+  position: relative;
+  padding: 40px 20px;
+  top: 60px;
+  min-height: calc(100vh - 120px);
+}
+
+#footer_main {
+  background: black;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  position: relative;
+  top: 60px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form .label {
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.form .input {
+  border: 2px solid;
+  height: 32px;
+  width: 100%;
+  padding: 4px 0 4px 32px;
+  margin: 10px 0;
+  border-radius: 0.3rem;
+}
+
+.form .textarea {
+  border: 2px solid;
+  padding: 4px 0 4px 32px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+.form .btn {
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  margin-top: 30px;
+  max-width: 120px;
+  width: 100%;
+  height: 32px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.form .btn:hover {
+  background: black;
+  color: white;
+}
+
+.user.is-active {
+  color: red;
+}

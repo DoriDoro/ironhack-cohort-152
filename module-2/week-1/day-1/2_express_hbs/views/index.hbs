@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Express + HBS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1 class="title">express + HBS</h1>
+    <p>
+        {{ name }} {{ bootcamp }}
+    </p>
+    
+    {{{markup}}}
+
+    {{#if isTruthy}}
+    <h2>If truthy ... This tag will be displayed !!</h2>
+    {{else}}
+    <h2>Else ... this other tag will be displayed !!</h2>
+    {{/if}}
+
+    {{#if isActive}}
+    <p>YAY !!!</p>
+    {{else if isInactive}}
+    <p>NAY !!!</p>
+    {{/if}}
+
+    {{#unless address}}
+    <h3>WARNING: We can't find the address!</h3>
+    {{/unless}}
+</body>
+
+</html>
