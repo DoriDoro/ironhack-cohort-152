@@ -1,0 +1,10 @@
+<ul class="img-link-list">
+    {{#each this}}
+    <li class="item">
+        <a href="{{this.href}}" class="link">
+            <span class="label">{{this.label}}</span>
+            <img src="img/{{this.src}}" alt="{{this.alt}}" class="img">
+        </a>
+    </li>
+    {{/each}}
+</ul>

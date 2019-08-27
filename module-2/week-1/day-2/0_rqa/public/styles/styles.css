@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+.img-link-list .item {
+  list-style: none;
+}
+
+.img-link-list .link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.img-link-list .img {
+  max-width: 200px;
+}
