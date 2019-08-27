@@ -1,7 +1,6 @@
 .DS_Store
 *.odt
+node_modules/
 0_random/
 0_random_group/
-module-1/labs-soluce-proposals/lab-javascript-chronometer/
-module-1/labs-soluce-proposals/lab-javascript-memory-game/
-module-1/labs-soluce-proposals/lab-dom-ironhack-cart/
+module-2/labs-soluce-proposals/lab-intro-node/
