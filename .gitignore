@@ -4,3 +4,5 @@ node_modules/
 0_random/
 0_random_group/
 module-2/labs-soluce-proposals/lab-intro-node/
+module-2/week-1/day-2/0_rqa_model
+*.env
