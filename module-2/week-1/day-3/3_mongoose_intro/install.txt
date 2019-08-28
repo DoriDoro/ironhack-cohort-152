@@ -1,0 +1,4 @@
+$ npm init -y
+$ npm i mongoose
+$ touch ./mongoose-simple.js
+$ nodemon ./mongoose-simple.js
