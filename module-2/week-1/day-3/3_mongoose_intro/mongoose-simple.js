@@ -11,13 +11,6 @@ const Cat = mongoose.model("Cat", { name: String });
 
 function addNewCat(catName) {
   const oneCat = new Cat({ name: catName });
-  // cat.save(err => {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     console.log(`meow! ${catName} SAVED.`);
-  //   }
-  // });
   oneCat
     .save()
     .then(res => {
@@ -31,6 +24,7 @@ function addNewCat(catName) {
 
 function showCats() {
   Cat.find({}, (err, cats) => {
+    console.log(cats);
     cats.forEach(cat => {
       console.log(" --> cat: ", cat.name);
     });
@@ -39,12 +33,12 @@ function showCats() {
 
 function addTenCats() {
   for (let i = 0; i < 10; i++) {
-    addNewCat(`Cat ${i}`);
+    addNewCat(`Cat ${ i + 1 }`);
   }
 }
 
-// addTenCats();
-addNewCat(`Mina`);
+addTenCats();
+// addNewCat(`Mina`);
 
 /* We have to wait for our cats to save before displaying them
  Remember, it's async */
