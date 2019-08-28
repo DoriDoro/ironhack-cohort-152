@@ -1,0 +1,12 @@
+body {
+    font-family: Arial;
+}
+
+#trees {
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+#trees li {
+    margin-bottom: 20px;
+}
