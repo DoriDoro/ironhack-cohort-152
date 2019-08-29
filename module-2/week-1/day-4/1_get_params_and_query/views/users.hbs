@@ -1,0 +1,19 @@
+<div class="page users">
+    <hr>
+    <form action="/find-user">
+        {{!-- pay attention to the "name" attribute on the input field  --}}
+        <label for="user_name">user name ?</label>
+        <input id="user_name" type="text" name="name">
+        {{!-- <input id="user_age" type="text" name="age"> --}}
+        <button>find</button>
+    </form>
+    <hr>
+    <h1 class="title">Users</h1>
+    {{#each users}}
+    <div class="user">
+        <span>-----------------------------</span>
+        <p>{{this.name }} (id: {{this.id}})</p>
+        <a href="/users/{{this.id}}">GET user infos</a>
+    </div>
+    {{/each}}
+</div>

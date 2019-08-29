@@ -1,0 +1,13 @@
+<div class="page">
+    <h1 class="title">User details</h1>
+    {{#unless user }} 
+    {{!-- if user is falsy --}}
+    <p>Sorry, no user found.</p>
+    {{/unless }}
+    {{#if user}}
+    {{!-- if user is truthy --}}
+    <p>
+        This user named {{ user.name }} has this id {{ user.id }}
+    </p>
+    {{/if}}
+</div>
