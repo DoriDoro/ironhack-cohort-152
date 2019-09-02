@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+li {
+  list-style-type: none; }
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+.page {
+  min-height: 100vh; }
+
+.page.home {
+  background: url("./../images/cinema.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.page.movies .list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 80vw;
+  margin: 20px 0 0; }
+
+.movies .movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  flex: 1;
+  margin-right: 20px;
+  max-width: 220px;
+  width: calc((80vw / 4) - 20px); }
+
+.movie-details {
+  display: flex;
+  padding: 40px 20px; }
+
+.movie-details .img {
+  height: 220px;
+  margin-right: 20px; }
+
+.movie-details .link {
+  display: block;
+  margin-bottom: 20px; }
+
+.movie-details .title {
+  margin-bottom: 10px; }
+
+.movie-details .stars {
+  padding-left: 20px; }
+
+.movie-details .stars li {
+  list-style: disc; }
+
+.movie-details .showtimes {
+  display: flex; }
+
+.movie-details .showtimes li:first-of-type {
+  padding-left: 0; }
+
+.movie-details .showtimes li {
+  padding-left: 10px; }
+
+.movie-details .showtimes li::after {
+  content: " | "; }
+
+.movie-details .showtimes li:last-of-type::after {
+  content: ""; }
+
+/*# sourceMappingURL=style.css.map */
