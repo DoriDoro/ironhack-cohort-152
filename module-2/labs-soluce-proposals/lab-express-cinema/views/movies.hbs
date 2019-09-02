@@ -1,11 +1,14 @@
 <div class="page movies">
-    <h1 class="title">{{title}}</h1>
+    <h1 class="title">
+        <a href="/">{{title}}</a>
+    </h1>
+    <p>Click on the movies to see the showtimes!</p>
     <ul id="movies" class="list">
         {{#each movies}}
         <li class="movie">
-            <img src="{{ this.image }}" alt="{{this.title}} cover">
-            {{ this.title }}
-            <a href="/movies/{{this._id}}">see more...</a>
+            <img src="{{ this.image }}" alt="{{this.title}}" class="img">
+            <h3 class="title">{{ this.title }}</h3>
+            <a href="/movies/{{this._id}}" class="link">see more...</a>
         </li>
         {{/each}}
     </ul>

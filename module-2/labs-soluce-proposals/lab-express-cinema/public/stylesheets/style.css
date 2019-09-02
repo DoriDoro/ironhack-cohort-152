@@ -6,43 +6,94 @@
 li {
   list-style-type: none; }
 
+html {
+  font-size: 16px; }
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font-family: Arial; }
 
 a {
-  color: #00B7FF; }
+  color: #00b7ff; }
 
 .page {
-  min-height: 100vh; }
+  min-height: 100vh;
+  position: relative; }
+
+.page:not(.home) {
+  padding: 20px; }
 
 .page.home {
   background: url("./../images/cinema.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 
-.page.movies .list {
+.page.home .call-to-action {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 45vw;
+  height: 45vh;
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column; }
+
+.page.home .call-to-action .title {
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 40px;
+  max-width: 320px; }
+
+.page.home .call-to-action .btn {
+  text-decoration: none;
+  border-radius: 3rem;
+  background: white;
+  color: #02b7ff;
+  padding: 20px;
+  font-size: 1.5rem; }
+
+.page.movies .list {
   max-width: 80vw;
-  margin: 20px 0 0; }
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  margin-top: 40px; }
+
+@media (max-width: 870px) {
+  .page.movies .list {
+    grid-template-columns: repeat(3, 200px); } }
+
+@media (max-width: 670px) {
+  .page.movies .list {
+    grid-template-columns: repeat(2, 200px); } }
+
+@media (max-width: 470px) {
+  .page.movies .list {
+    grid-template-columns: repeat(1, 200px); } }
 
 .movies .movie {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-  flex: 1;
-  margin-right: 20px;
-  max-width: 220px;
-  width: calc((80vw / 4) - 20px); }
+  justify-content: space-between; }
+
+.movies .movie .title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  white-space: nowrap;
+  margin: 15px 0 10px; }
 
 .movie-details {
   display: flex;
   padding: 40px 20px; }
 
+.movie-details .info > * {
+  margin-bottom: 20px; }
+
 .movie-details .img {
-  height: 220px;
+  height: 300px;
   margin-right: 20px; }
 
 .movie-details .link {
