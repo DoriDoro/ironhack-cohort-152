@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Week 5 - Day 1 - A.J.A.X with Axios</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./client.js" type="module"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="client_app">
+    <aside id="intro">
+      <h1 class="is-small title is-colored">A.J.A.X with Axios</h1>
+      <h2 class="is-small title">GET / POST / PATCH / DELETE</h2>
+      <hr />
+      <h3 class="is-colored title">+ new product</h3>
+      <form id="form_product">
+        <input type="text" id="p_name" class="input" />
+        <!-- <input type="text" id="p_price"/> -->
+        <button id="create_product" class="btn">+</button>
+      </form>
+      <hr />
+      <h3 class="title">Simple Products Todo</h3>
+      <ol>
+        <li>axios.get all products</li>
+        <li>axios.post a product</li>
+        <li>axios.patch a product</li>
+        <li>axios.delete a product</li>
+      </ol>
+      <p>
+        For this task, we'll need a first http server to serve a client app.
+        (with lite-server, express and many others)
+        <br /><br />
+        client server interacts through HTTP with json-server<br>
+        We'll use axios to perform the requests.<br /><br>
+        So we also need to run an other server (API server) !<br />
+        <br />
+        client server + api server !!! <br /><br>
+        So be sure to open 2 shell windows in vs code or iterm.
+      </p>
+      <hr />
+      <h3 class="title">Kickstart</h3>
+      <code
+        >$ lite-server<br />
+        $ npm run start
+      </code>
+      <hr />
+      <h3 class="title">Helpers</h3>
+      <p>
+        HTTP status<br />
+        <a
+          target="_blank"
+          href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+          class="link small"
+        >
+          @mdn</a
+        >
+        <br />
+        HTTP verbs<br />
+        <a
+          target="_blank"
+          href="
+        https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+          class="link small"
+          >@mdn</a
+        ><br />
+      </p>
+    </aside>
+    <main id="board">
+      <h3 class="title is-colored">Products board</h3>
+      <table id="products" class="board"></table>
+    </main>
+  </body>
+</html>

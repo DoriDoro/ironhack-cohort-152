@@ -1,0 +1,13 @@
+{
+  "name": "1_json-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "json-server --watch fake-db.json --port 8001"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

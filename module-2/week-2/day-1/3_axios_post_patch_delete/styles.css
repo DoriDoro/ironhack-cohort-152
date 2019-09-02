@@ -1,0 +1,112 @@
+/* lil' reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+/* basics */
+p {
+  margin: 0 0 18px 0;
+  box-shadow: -0.9px 0.1px 6.1px 0.2px #696666;
+  border-radius: 0.1rem;
+  max-width: 400px;
+  padding: 10px;
+  text-align: justify;
+}
+ol,
+ul {
+  padding: 0 0 18px 18px;
+}
+hr {
+  display: block;
+  margin: 10px auto 18px;
+}
+code {
+  padding: 4px;
+  white-space: pre-line;
+}
+/* components */
+#client_app {
+  font-size: 16px;
+  min-height: 200vh;
+  font-family: Avenir;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 45% 1fr;
+}
+#intro {
+  border-right: 1px solid;
+  padding: 0 20px 20px;
+  max-width: 300px;
+  padding-right: 20px;
+}
+table.board {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+table.board td {
+  padding: 10px;
+  border-collapse: collapse;
+}
+#board {
+  padding: 0 0 20px 20px;
+}
+#board td {
+  padding: 20px;
+  border: 1px solid;
+}
+/* hey you !!! there is some nice CSS tricks below : ) */
+#board .delete, #board .edit {
+  cursor: pointer;
+  user-select: none; /* ^^ */
+}
+#board .delete:hover span, #board .edit:hover span  {
+  color: darkorange;
+  pointer-events: none; /* ^^ */
+}
+#board > .title {
+  display: flex;
+  align-items: center;
+}
+#board .btn.get {
+  margin-left: 9px;
+}
+/* generics */
+.link.small {
+  font-size: .9rem;
+}
+.title {
+  margin: 10px 0 18px;
+}
+.title.is-colored {
+  color: #4a5b72;
+}
+.title.is-small {
+  font-size: 1.1rem;
+}
+.input[type="text"] {
+  box-shadow: 0px 0.1px 2px 0.9px #696666;
+  border: none;
+  padding: 5px 10px 5px 20px;
+  height: 20px;
+}
+.btn {
+  outline: none;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  max-width: 320px;
+  user-select: none; /* ^^ */
+}
+.btn:hover {
+  background: #4a5b72;
+  color: greenyellow;
+  border-color: transparent;
+}
