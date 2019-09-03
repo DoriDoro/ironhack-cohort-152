@@ -1,0 +1,15 @@
+<h2>Sign Up</h2>
+{{loggedin}}
+<hr>
+<form id="form" method="POST" action="/signup">
+    {{!-- hidden fields have some usecases, we'll see when they pop up  --}}
+    <input type="hidden" value="foobarbaz" name="not-so-secret">
+    <label for="username">Username</label>
+    <input autocomplete="off" type="text" name="username" />
+    <label for="password">Password</label>
+    <input id="user-password" type="password" name="password" />
+    {{#if errorMsg}}
+    <div class="error-message">{{errorMsg}}</div>
+    {{/if}}
+    <button>Sign Up</button>
+</form>
