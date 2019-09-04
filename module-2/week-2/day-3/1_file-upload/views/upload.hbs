@@ -1,0 +1,17 @@
+<h2 class="title">Create new product</h2>
+<form method="post" action="/product" class="form" enctype="multipart/form-data">
+
+    <label for="name">name</label>
+    <input id="name" type="text" name="name" value="test product" required>
+
+    <label for="ref">reference</label>
+    <input id="ref" type="text" name="ref" value="ref123123A" placeholder="ex: ref123123A" required>
+
+    <label for="price">price</label>
+    <input id="price" type="number" min="1" step="1" value="1" name="price" required >
+
+    <label for="image_product">pick an image</label>
+    <input id="image_product" type="file" name="image_product">
+
+    <button class="btn">ok</button>
+</form>

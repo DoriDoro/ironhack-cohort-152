@@ -1,0 +1,16 @@
+<h2 class="title">All products</h2>
+{{#unless products}}
+<p class="text-block">sorry, no products yet</p>
+{{/unless}}
+{{#if products}}
+<ul id="products" class="list">
+    {{#each products}}
+    <li class="item">
+        <h2 class="title mini">{{ this.name }}</h2>
+        <img src="{{this.image}}" alt="product {{this.ref}} image">
+        <p class="price">{{this.price}} &euro;</p>
+        <p class="ref text-mini">( {{this.ref}} )</p>
+    </li>
+    {{/each}}
+</ul>
+{{/if}}
