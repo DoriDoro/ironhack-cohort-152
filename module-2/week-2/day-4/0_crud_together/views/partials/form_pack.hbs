@@ -1,0 +1,52 @@
+<h2 class="title">Create a new Pack</h2>
+<form action="{{action}}" method="post" id="form_pack" class="form">
+    {{#each products}}
+    <input type="hidden" name="products" value="{{this._id}}">
+    {{/each}}
+    <div id="pack_name_block">
+        <label for="new_pack_name" class="label">Pack Name</label>
+        <input id="new_pack_name" type="text" name="name" class="input" 
+        value="{{ternary pack pack.name 'default pack'}}">
+    </div>
+    <div id="pack_price_block">
+        <label for="new_pack_name" class="label">Pack price</label>
+        <input id="new_pack_price" type="hidden" name="price" 
+        value="{{ternary pack pack.price 0}}">
+        <div class="flex row">
+            <span class="money">
+                <span id="pack_price_display" class="massive number" contenteditable>
+                    {{ternary pack pack.price 0}}
+                </span>
+                <span class="massive currency">€</span>
+            </span>
+            <span id="price_widget">
+                <i class="icon fa fa-caret-up"></i>
+                <i class="icon fa fa-caret-down"></i>
+            </span>
+        </div>
+    </div>
+    <button id="btn_create_pack" class="btn">ok</button>
+</form>
+<hr>
+<table class="board">
+    <thead class="head">
+        <tr class="row">
+            <th class="cell">name</th>
+            <th class="cell">category</th>
+            <th class="cell">price</th>
+            <th class="cell">remove from pack</th>
+        </tr>
+    </thead>
+    <tbody class="body">
+        {{#each products}}
+        <tr class="row" id="product_{{this._id}}">
+            <td class="cell">{{this.name}}</td>
+            <td class="cell">{{this.category.name}}</b></td>
+            <td class="cell">{{this.price}}€</td>
+            <td class="cell">
+                <button class="btn remove" data-id-product="{{this._id}}">X</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

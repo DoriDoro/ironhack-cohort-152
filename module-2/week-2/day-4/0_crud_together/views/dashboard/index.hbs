@@ -1,0 +1,12 @@
+{{>head_dashboard}}
+{{#compare user.role "admin" operator="===" }}
+{{>nav_dashboard}}
+{{/compare}}
+<div class="profile">
+    <div class="avatar navy-border" style="background-image: url('{{user.avatar}}')"></div>
+   
+    <p class="greetings">
+        Hi <b>{{user.name}}</b> !!!<br>
+        Welcome on your profile !
+    </p>
+</div>

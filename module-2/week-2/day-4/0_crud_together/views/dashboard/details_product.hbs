@@ -1,0 +1,17 @@
+{{>head_dashboard}}
+{{>nav_dashboard}}
+
+<h3 id="title_detail_product" class="title flex align-y-center">
+    <span>details product</span>
+    <button id="show_edit_product_form" class="btn">edit</button>
+</h3>
+
+<div id="product_infos">
+    <p>product name: <b>{{ product.name }}</b> ( {{product.ref}} )</p>
+    <p>price : {{ product.price}} €</p>
+    <p><i>category</i> : {{ product.category.name }}</p>
+</div>
+
+<hr>
+
+<div id="wrap_form_edit_product" class="is-hidden">{{>form_product}}</div>

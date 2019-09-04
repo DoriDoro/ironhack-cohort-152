@@ -1,0 +1,9 @@
+<h1 class="title">Dashboard</h1>
+<p>a dashboard is your app's control panel ! </p>
+<hr>
+{{#if msg}}
+<p class="msg {{msg.status}}">
+    {{msg.txt}}<br>
+    {{msg.details}}
+</p>
+{{/if}}
