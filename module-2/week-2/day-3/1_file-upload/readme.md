@@ -1,0 +1,6 @@
+# .env structure for this project
+PORT = ???
+CLOUDINARY_NAME = ???
+CLOUDINARY_KEY = ???
+CLOUDINARY_SECRET = ???
+MONGO_URI = ???
