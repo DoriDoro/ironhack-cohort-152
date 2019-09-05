@@ -1,0 +1,24 @@
+<h2 class="title">{{title}}</h2>
+<form method="post" action="{{action}}" id="form_create_product" class="form">
+    <label for="name">name</label>
+
+    {{!-- @todo : manage password in dashboard/user/crearte --}}
+    <input id="name" type="hidden" value="123Soleil" name="password" required>
+
+    <input id="name" type="text" value="{{ternary product product.name "default product"}}" name="name" required>
+
+    <label for="ref">reference</label>
+    <input id="ref" type="text" value="{{ternary product product.ref ""}}" name="ref" required
+        placeholder="ex: ref123123A">
+
+    <label for="price">price</label>
+    <input id="price" type="number" min="0" name="price" required value="{{ternary product product.price 1}}">
+
+    <label for="category">category</label>
+    <select id="category" name="category">
+        {{#each categories}}
+        <option value="{{this._id}}" selected="">{{this.name}}</option>
+        {{/each}}
+    </select>
+    <button id="btn_create_product" class="btn">ok</button>
+</form>

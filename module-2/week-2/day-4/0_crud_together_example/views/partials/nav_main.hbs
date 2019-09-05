@@ -1,0 +1,18 @@
+<nav id="nav_main" class="nav navy-bg">
+    <span class="links">
+        <a href="/home" class="link">home</a>
+        <a href="/about" class="link">about</a>
+        {{#unless isLoggedIn}}
+        <a href="/register" class="link">register</a>
+        <a href="/login" class="link">login</a>
+        {{/unless}}
+        {{#if isLoggedIn}}
+        <a href="/dashboard" class="link">dashboard</a>
+        {{/if}}
+    </span>
+    {{#if isLoggedIn}}
+    <a href="/logout">
+        <i class="clickable fas fa-sign-out-alt"></i>
+    </a>
+    {{/if}}
+</nav>

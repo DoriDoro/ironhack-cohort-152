@@ -1,0 +1,24 @@
+
+<h2 class="title">Create a new user</h2>
+
+<form method="post" action="/dashboard/user/" id="form_create_user" class="form">
+    <label for="name">name</label>
+
+
+    {{!-- @todo : manage password in dashboard/user/crearte --}}
+    <input id="name" type="hidden" value="123Soleil" name="password" required>
+
+    <input id="name" type="text" value="foo" name="name" required>
+    <label for="lastname">lastname</label>
+    <input id="lastname" type="text" value="bar" name="lastname" required>
+    <label for="email">email</label>
+    <input id="email" type="email" value="baz@baz.com" name="email" required>
+    <label for="age">age</label>
+    <input id="age" type="number" value="38" name="age" required>
+    <label for="role">role</label>
+    <select id="role" name="role">
+        <option value="user" selected>user</option>
+        <option value="admin">admin</option>
+    </select>
+    <button id="btn_create_user" class="btn">ok</button>
+</form>

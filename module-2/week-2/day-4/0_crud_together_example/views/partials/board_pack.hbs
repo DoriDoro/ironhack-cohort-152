@@ -1,0 +1,26 @@
+<table class="board">
+    <thead class="head">
+        <th class="cell">name</th>
+        <th class="cell">price</th>
+        <th class="cell">products</th>
+        <th class="cell">edit</th>
+        <th class="cell">delete</th>
+    </thead>
+    <tbody class="body">
+        {{#each packs}}
+        <tr class="row">
+            <td class="cell">{{this.name}}</td>
+            <td class="cell">{{this.price}}</td>
+            <td class="cell">{{this.products.length}}</td>
+            <td class="cell">
+                <a href="/dashboard/pack/edit/{{this._id}}" class="link">edit</a>
+            </td>
+            <td class="cell">
+                <a href="/dashboard/pack/delete/{{this._id}}" class="delete btn">X</a>
+            </td>
+            {{else}}
+            <td colspan="5" class="cell row-empty">no pack available yet</td>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>
