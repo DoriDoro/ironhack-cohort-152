@@ -12,7 +12,7 @@ router.get("/main", (req, res, next) => {
 
 router.get("/private", (req, res) => {
   if (req.session.currentUser) {
-    res.render("private", { userInfos: req.session.currentUser });
+    res.render("private", { username: req.session.currentUser.username });
   } else {
     res.redirect("/login");
   }

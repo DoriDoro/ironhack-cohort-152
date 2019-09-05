@@ -19,13 +19,16 @@ router.post("/signup", (req, res, next) => {
           res.render("auth/signup", { errorMsg: "User already exists !" });
           return;
         }
-        const salt = bcrypt.genSaltSync(10);
+        const salt = bcrypt.genSaltSync(10); // cryptography librairie
         const hashed = bcrypt.hashSync(user.password, salt);
+        // console.log("original", user.password);
+        // console.log("hashed", hashed);
+        // return ;
         user.password = hashed;
         userModel
           .create(user)
           .then(() => res.redirect("/"))
-          .catch(err => console.log(err));
+          .catch(next(err));
       })
       .catch(dbErr => {
         next(dbErr);

@@ -19,7 +19,7 @@ app.use(express.json()); // mandatory to parse post request
 app.use(express.urlencoded({ extended: false })); // mandatory to parse post request
 
 // LOGIN CONFIG HERE //
-app.use(cookieParser());
+app.use(cookieParser()); 
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -52,8 +52,8 @@ hbs.registerPartials(__dirname + "/views/partials");
 // app.locals global variables for the template (hbs)
 app.locals.title = "Easy login";
 
-const index = require("./routes/index"); // router 1
-const auth = require("./routes/auth"); // router 2
+const index = require("./routes/index"); // router 1 : base routes
+const auth = require("./routes/auth"); // router 2 : auth process
 
 app.use(index); // using router 1
 app.use(auth); // using router 2
