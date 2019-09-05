@@ -72,15 +72,15 @@ Each team will have 5 minutes to showcase their work, friday at 5PM.
 
 ## Bonuses
 
-# 1 make the shop responsive with flex and media-queries
+- 1 make the shop responsive with flex and media-queries
 
-# 2 add some custom categories @ /prod-add
+- 2 add some custom categories @ /prod-add
 
-# 3 code the filters with the AJAX method
+- 3 code the product filters with the AJAX method
 
 ---
 
 ## Hardcore bonus
 
-# 4 Add a shopcart feature :D
+- 4 Add a shopcart feature :D
 
