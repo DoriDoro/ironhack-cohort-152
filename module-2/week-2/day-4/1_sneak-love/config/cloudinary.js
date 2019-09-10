@@ -7,11 +7,11 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_KEY,
   api_secret: process.env.CLOUDINARY_SECRET
 });
-
+// console.log(process.env.CLOUDINARY_NAME,process.env.CLOUDINARY_KEY,process.env.CLOUDINARY_SECRET)
 const storage = cloudinaryStorage({
   cloudinary,
   folder: "sneak-love",
-  allowedFormats: ['jpg', 'png'],
+  allowedFormats: ['jpg', 'png', "jpeg"],
   filename: function (req, file, cb) {
     // console.log("request =>", req);
     // console.log("file =>", file);

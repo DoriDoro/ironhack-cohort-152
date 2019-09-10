@@ -27,7 +27,7 @@ router.post("/product", uploader.single("image_product"), (req, res) => {
 
     // if a file has been uploaded, multer will fill the request object with a file key lkeading to the uploaded media
     console.log(req.file);
-    if (req.file) newProduct.image = req.file.secure_url;
+    if (req.file) newProduct.image = req.file.secure_url; // important to set the URL to https instead of http!
 
     ProductModel.create(newProduct)
       .then(dbRes => {

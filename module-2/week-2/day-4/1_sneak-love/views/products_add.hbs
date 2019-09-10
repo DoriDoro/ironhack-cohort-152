@@ -1,5 +1,5 @@
 <div class="big-container product-manage-wrapper flexed-item">
-  <form action="/prod-add" method="post" class="add-product-form" enctype="multiparty/form-data">
+  <form action="/prod-add" method="post" class="add-product-form" enctype="multipart/form-data">
     {{#if msg}}
     <p class="msg {{msg.statu}}">{{msg.txt}}</p>
     {{/if}}
@@ -30,12 +30,12 @@
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneaker-img" class="label-price label">Image</label>
-      <input id="sneaker-img" type="file" class="sneacker-price input">
+      <input id="sneaker-img" type="file" class="sneacker-price input" name="image">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="category" class="label-main-cat label">Main category</label>
       <select id="category" class="select" required name="category">
-        <option value="-1" disabled selected>Choose a category</option>
+        <option value="-1"> Choose a category</option>  <!-- disabled selected -->
         <option value="men">Men</option>
         <option value="women">Women</option>
         <option value="kids">Kids</option>
@@ -50,12 +50,16 @@
   </form>
 
   <div class="add-tag-form">
+    <form action="/sneakers/collection" method="post" enctype="multipart/form-data">
     <p id="add-tag-message" class="msg"></p>
     <h3 class="form-title">Add tags</h3>
     <div class="form-item-wrapper flexed-item">
       <label for="category-name" class="category-name label">Sneaker tag</label>
-      <input id="new_tag_name" type="text" class="input" placeholder="ex: Gangsta">
+      <input id="new_tag_name" type="text" class="input" placeholder="ex: Gangsta" name="lable">
     </div>
     <button id="btn_new_tag" class="button-primary add-category-btn">Create this category</button>
+    </form>
   </div>
+
+
 </div>

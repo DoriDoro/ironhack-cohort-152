@@ -3,6 +3,7 @@ const router = new express.Router();
 module.exports = router;
 const UserModel = require('./../models/User');
 const bcrypt = require("bcrypt");
+// const session = require('express-session');
 
 
 router.post("/signup", (req, res, next) => {
@@ -37,7 +38,7 @@ router.post("/signup", (req, res, next) => {
 
   router.post("/signin", (req, res, next) => {
     const user = req.body; 
-    console.log(req.body);
+    // console.log(req.body);
 
     UserModel
     .findOne({ email: user.email })

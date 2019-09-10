@@ -1,0 +1,11 @@
+
+add product:
+- tags visiable to choose
+- 
+
+add tag:
+- redirection to the /sneaker/collection page and display all collections and the tags
+
+men, women and kids page:
+- display the tags
+
